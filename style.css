@@ -15,12 +15,13 @@ body {
 
 /* Card style */
 .converter-card {
-    background-color: rgba(255, 255, 255, 0.5); /* 90% opacity */
+    background-color: rgba(255, 255, 255, 0.5); /* 50% opacity */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
     text-align: center;
-    width: 300px;
+    width: 90%; max-width: 400px;
+    backdrop-filter: blur(5px);
 }
 
 /* Heading */
@@ -40,6 +41,10 @@ input[type="text"], input[type="number"] {
     font-size: 16px;
     box-sizing: border-box;
 }
+input:focus{
+    outline: none;
+    border:2px solid #007BFF
+}
 
 /* Button */
 button {
@@ -51,10 +56,12 @@ button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Result */
@@ -62,6 +69,24 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
-    color: #007BFF;
+    color: #150755;
+    
+    
 }
 
+details{
+     padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 2px;
+    border: none;
+    background-color:transparent;
+    color: rgb(14, 11, 11);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+
+}
+details summary{
+    font-weight: bold;
+    cursor: pointer;
+}
