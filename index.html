@@ -1,13 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <title>Altitude Converter – Run Times Adjusted for Altitude</title>
-    <meta name="description" content="Convert your running time at altitude to a sea-level equivalent for distances from 800m to Marathon. Easy, accurate, and free.">
-    <meta name="keywords" content="1600m, 800m, running times, altitude conversion, high altitude running, sea-level equivalent, race times, track running">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+<title>Altitude Converter</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
-
 <body>
     <div class="converter-card">
         <h1>Altitude Converter</h1>
@@ -24,7 +21,7 @@
         </select>
         <br><br>
         
-        <label>Time (mm:ss): </label>
+        <label>Time (hh:mm:ss): </label>
         <input id="initialTime" type="text" placeholder="hh:mm:ss">
         <br><br>
         
@@ -35,9 +32,33 @@
         <button id="convertButton">Convert</button>
         
         <p id="result"></p>
+        <details>
+        <summary>About this tool</summary> 
+        <p>This tool converts altitude times to equivalent sea-level times. At higher elevations, reduced oxygen availability decreases aerobic performance, which increases race times. Therefore, the longer the distance (i.e., 10000m, Half-Marathon, Marathon, etc.) at higher altitudes the larger the conversion because they are more aerobic. 
+        This model uses standard conversion constants for every increase of 1000m in elevation, as follows:</p>
+    
+        <ul>
+        <li>800m: 1.0%</li>
+        
+        <li>1600m: 1.8%</li>
+        
+        <li>3200m: 2.2%</li>
+         
+        <li>5000m: 2.5%</li>
+         
+        <li>10000m: 2.8%</li>
+         
+        <li>Half-Marathon: 3.2%</li>
+         
+        <li>Marathon: 3.5%</li>
+        </ul>
+        <h6>Note: This tool provides estimated conversions and is not affiliated with or endorsed by the NCAA.</h6>
+        </details>
     </div>
 
     <script src="script.js"></script>
+
+ 
 </body>
 </html>
 
