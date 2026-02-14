@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>1600m Altitude Converter</title>
-    <meta name="description" content="Convert your 1600m altitude running time to sea-level equivalent easily.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+<title>Altitude Converter</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="converter-card">
-        <h1>1600m Altitude Converter</h1>
+        <h1>Altitude Converter</h1>
+
+        <label for="Distance"> Choose a distance:</label>
+        <select name="Distance" id="Distance">
+            <option value="800m">800m</option>
+            <option value="1600m">1600m</option>
+            <option value="3200m">3200m</option>
+            <option value="5000m">5000m</option>
+            <option value="10000m">10000m</option>
+            <option value="Half-Marathon">Half-Marathon</option>
+            <option value="Marathon">Marathon</option>
+        </select>
+        <br><br>
         
         <label>Time (mm:ss): </label>
-        <input id="initialTime" type="text" placeholder="mm:ss">
+        <input id="initialTime" type="text" placeholder="hh:mm:ss">
         <br><br>
         
         <label>Altitude (feet): </label>
@@ -27,8 +35,8 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
+
 
 
 
